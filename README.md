@@ -69,6 +69,10 @@ Tested access to ensure the intern could:
 
 - Not access or modify the production instance.
 
+<div align="center"> 
+   <h4>For Step-by-Step Walkthrough, please see the `Step-by-Step GUI Walkthrough Guide` file</h3>
+</div>
+
 ## Conclusion
 
 This project successfully established a secure environment for the intern to work in while maintaining the integrity of the production system. By leveraging AWS IAM and EC2 instances, we ensured that the intern’s access was both secure and limited to only what was necessary for their tasks.
