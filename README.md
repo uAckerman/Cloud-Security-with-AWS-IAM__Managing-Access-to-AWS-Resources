@@ -11,6 +11,10 @@ In this project, the objective was to demonstrate how IAM can be used to manage 
 - **Onboarding a new intern** with controlled access to the development environment while restricting access to the production environment.
 - **Testing IAM policies** to ensure that users can only access the resources they are authorized to use.
 
+<div align="center">
+  <img src="docs/screenshots/aws.png" alt="project" max-width="300">
+</div>
+
 ## Tools and Services Used
 
 **Amazon EC2** : To provision virtual machines for both production and development environments.  
@@ -23,7 +27,7 @@ In this project, the objective was to demonstrate how IAM can be used to manage 
 
 ## Methodology
 
-1- Launching EC2 Instances
+### 1- Launching EC2 Instances
 Launched two EC2 instances with the following configurations:
 
 **Production Instance:**
@@ -33,3 +37,47 @@ Tagged with Env: production
 Tagged with Env: development
 
 _Both instances were tagged to easily identify and separate them based on the environment._
+
+### 2- Creating IAM Policy
+
+Created a custom IAM policy to grant the intern restricted access:
+
+- Allow access only to EC2 instances tagged with Env: development.
+- Deny access to EC2 instances tagged with Env: production.
+- Prevent the creation and deletion of tags on instances, regardless of the environment.
+```bash
+  Script can be found in  `Script` file 
+```
+    
+### 3- Setting Up IAM User and Group
+
+Created an IAM group and attached the IAM policy for development access.  
+
+Created an IAM user for the intern with access to the AWS Management Console:  
+
+The intern was added to the nextwork-dev-group, ensuring that they inherit the correct permissions.
+
+### 4- Creating Account Alias for Easier Login
+
+To simplify login for the intern, I created an Account Alias (alias-name) which allows the intern to log in using a friendly URL instead of a complicated account ID.
+
+### 5- Testing Intern’s Access
+
+Tested access to ensure the intern could:
+
+- Access the development instance.
+
+- Not access or modify the production instance.
+
+## Conclusion
+
+This project successfully established a secure environment for the intern to work in while maintaining the integrity of the production system. By leveraging AWS IAM and EC2 instances, we ensured that the intern’s access was both secure and limited to only what was necessary for their tasks.
+
+## Acknowledgments
+
+A special thanks to **[NextWork](https://learn.nextwork.org/)** for providing the guidance and resources that helped shape this project. Their comprehensive framework on cloud security and IAM best practices was invaluable. 
+
+Feel free to join me in exploring more on **NextWork** to dive deeper into AWS and cloud security concepts!
+
+
+
