@@ -38,6 +38,20 @@ Tagged with Env: development
 
 _Both instances were tagged to easily identify and separate them based on the environment._
 
+***
+
+<div align="center">
+  <img src="docs/screenshots/pic2.png" alt="project" max-width="300">
+</div>
+
+***
+***
+
+<div align="center">
+  <img src="docs/screenshots/pic3.png" alt="project" max-width="300">
+</div>
+
+***
 ### 2- Creating IAM Policy
 
 Created a custom IAM policy to grant the intern restricted access:
@@ -48,7 +62,22 @@ Created a custom IAM policy to grant the intern restricted access:
 ```bash
   Script can be found in  `Script` file 
 ```
-    
+
+***
+<div align="center">
+  <img src="docs/screenshots/pic4.png" alt="project" max-width="300">
+  <img src="docs/screenshots/pic6.png" alt="project" max-width="300">
+</div>
+
+***
+***
+
+<div align="center">
+  <img src="docs/screenshots/pic6.png" alt="project" max-width="300">
+</div>
+
+***
+
 ### 3- Setting Up IAM User and Group
 
 Created an IAM group and attached the IAM policy for development access.  
@@ -57,9 +86,38 @@ Created an IAM user for the intern with access to the AWS Management Console:
 
 The intern was added to the nextwork-dev-group, ensuring that they inherit the correct permissions.
 
+***
+
+<div align="center">
+  <img src="docs/screenshots/pic10.png" alt="project" max-width="300">
+</div>
+
+***
+***
+
+<div align="center">
+  <img src="docs/screenshots/pic12.png" alt="project" max-width="300">
+</div>
+
+***
+***
+
+<div align="center">
+  <img src="docs/screenshots/pic14.png" alt="project" max-width="300">
+</div>
+
+***
+
 ### 4- Creating Account Alias for Easier Login
 
 To simplify login for the intern, I created an Account Alias (alias-name) which allows the intern to log in using a friendly URL instead of a complicated account ID.
+
+***
+<div align="center">
+  <img src="docs/screenshots/pic8.png" alt="project" max-width="300">
+</div>
+
+***
 
 ### 5- Testing Intern’s Access
 
@@ -69,9 +127,24 @@ Tested access to ensure the intern could:
 
 - Not access or modify the production instance.
 
-<div align="center"> 
-   <h4>For Step-by-Step Walkthrough, please see the `Step-by-Step GUI Walkthrough Guide` file</h3>
+***
+<div align="center">
+  <img src="docs/screenshots/pic15.png" alt="project" max-width="300">
 </div>
+
+***
+***
+<div align="center">
+  <img src="docs/screenshots/pic17.png" alt="project" max-width="300">
+</div>
+
+***
+***
+<div align="center">
+  <img src="docs/screenshots/pic19.png" alt="project" max-width="300">
+</div>
+
+***
 
 ## Conclusion
 
